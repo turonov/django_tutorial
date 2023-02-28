@@ -39,3 +39,11 @@ django-admin startproject core .
 ```bash
 python manage.py runserver
 ```
+
+## Make a request to the server
+
+```bash
+curl http://127.0.0.1:8000/
+```
+
+```bash 
