@@ -47,3 +47,19 @@ curl http://127.0.0.1:8000/
 ```
 
 ```bash 
+
+
+## Create an app
+
+```bash
+python manage.py startapp api
+```
+
+## Create a view
+
+```python
+from django.http import HttpResponse, HttpRequest
+
+def index(request: HttpRequest) -> HttpResponse:
+    return HttpResponse("Home page")
+```
