@@ -16,9 +16,26 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Create a .gitignore file
+
+```bash
+echo "venv" >> .gitignore
+```
+
 ## Check the Django version
 
 ```bash
 import django
 print(django.get_version())
+```
+## Create a project
+
+```bash
+django-admin startproject core .
+```
+
+## Run the server
+
+```bash
+python manage.py runserver
 ```
