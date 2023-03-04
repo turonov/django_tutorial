@@ -1,10 +1,13 @@
 from django.http import HttpResponse,HttpRequest,JsonResponse
 import json
+from .models import Person
+
+
+
 def index(request:HttpRequest):
-    data=request.GET
-    a = int(data.get('a',0))
-    b = int(data.get('b',0))
-    return JsonResponse({'sum':a+b})
+    person = Person.objects.all()
+    print(person[0])
+    return JsonResponse({})
 
 def get_data(request:HttpRequest):
 
@@ -15,4 +18,4 @@ def get_data(request:HttpRequest):
     if request.method =="GET":
         print('GET')
 
-    return JsonResponse("hello world")
+    return HttpResponse("hello world")
